@@ -1,4 +1,4 @@
-// Display de 7 Segmentos 99 Pulsaciones | 7 Segment Display 99 Pulsations
+// 2 Display de 7 Segmentos y 99 Pulsaciones | 2 7 Segment Display and 99 Pulsations
 
 // Librerias | Libraries
 #include <16f877a.h>
@@ -10,6 +10,8 @@
 // Numero en Exadecimal | Hexadecimal Number
 // 0X3F es 0, 0X06 es 1, 0X5B es 2, 0X4F es 3, 0X66 es 4, 0X6D es 5, 0X7D es 6, 0X07 es 7, 0X7F es 8, 0X6F es 9
 int const num[10] = {0X3F, 0X06, 0X5B, 0X4F, 0X66, 0X6D, 0X7D, 0X07, 0X7F, 0X6F};
+
+// Variables Globales | Global Variables
 int display1 = 0;
 int display2 = 0;
 int pulsations = 0;
@@ -20,7 +22,6 @@ void main()
     // Declarando los puertos de entrada y salida | Declaring input and output ports
     set_tris_B(0b0000000);
     set_tris_D(0b1111111);
-    set_tris_C(0b0000000);
 
     // Bucle Infinito | Infinite Loop
     While(true)
